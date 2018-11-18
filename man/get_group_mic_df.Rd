@@ -4,7 +4,7 @@
 \alias{get_group_mic_df}
 \title{Function to compute indexes around mic for each hierarchy.}
 \usage{
-get_group_mic_df(df, group_key, min_value, ...)
+get_group_mic_df(df, group_key, min_value)
 }
 \arguments{
 \item{df}{: Data frame object which is input of mic.}
@@ -12,8 +12,6 @@ get_group_mic_df(df, group_key, min_value, ...)
 \item{group_key}{: characters, which is key of hierarchy}
 
 \item{min_value}{: Minimum number of records in each group.}
-
-\item{...}{: parameters for minerva::mine.}
 }
 \description{
 Function to compute indexes around mic for each hierarchy.

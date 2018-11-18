@@ -4,14 +4,12 @@
 \alias{get_mic_df}
 \title{Function to get information around MIC with data frame format}
 \usage{
-get_mic_df(df, is_flat = TRUE, ...)
+get_mic_df(df, is_flat = TRUE)
 }
 \arguments{
 \item{df}{: Data frame object. This is input to compute mic.}
 
 \item{is_flat}{: Boolean, whether you want to get the return with plain data frame format.}
-
-\item{...}{: parameters for minerva::mine.}
 }
 \description{
 Function to get information around MIC with data frame format
