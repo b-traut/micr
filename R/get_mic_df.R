@@ -79,6 +79,7 @@ get_mic_df <- function(df, is_flat = TRUE){
 #' @importFrom dplyr bind_cols
 #' @importFrom dplyr select
 #' @importFrom dplyr group_by
+#' @importFrom dplyr group_by_
 #' @importFrom dplyr filter
 #' @importFrom dplyr n
 #' @importFrom dplyr slice
