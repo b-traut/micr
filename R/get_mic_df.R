@@ -194,7 +194,7 @@ get_group_mic_df <- function(df, group_key, min_value, ...){
 
 get_mic <- function(df, group_key = NA, min_value = 1L, is_flat = TRUE){
   
-  if(is.na(group_keys)){
+  if(is.na(group_key)){
     out <- get_mic_df(df, is_flat)
   } else {
     out <- get_group_mic_df(df, group_key, min_value)
