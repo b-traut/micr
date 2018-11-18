@@ -1,7 +1,6 @@
 #' Function to get information around MIC with data frame format
 #' @param df : Data frame object. This is input to compute mic.
 #' @param is_flat : Boolean, whether you want to get the return with plain data frame format.
-#' @param ... : parameters for minerva::mine.
 #' @importFrom dplyr select_if
 #' @importFrom dplyr %>%
 #' @importFrom dplyr mutate
@@ -18,7 +17,7 @@
 #' @importFrom magrittr set_colnames
 #' @importFrom magrittr %<>%
 #' @export
-get_mic_df <- function(df, is_flat = TRUE, ...){
+get_mic_df <- function(df, is_flat = TRUE){
   
   extract_cols <- function(x) {
     return(is.numeric(x) | is.integer(x))
@@ -36,7 +35,7 @@ get_mic_df <- function(df, is_flat = TRUE, ...){
   
   # Compute mic and transform to list of data frame
   mics <- df_selected %>% 
-    mine(use = "complete.obs", ...) %>% 
+    mine(use = "complete.obs") %>% 
     map(~ as.tibble(.x) %>% 
           mutate(col = cols) %>% 
           select(dim(.x)[2] + 1, 1:(dim(.x)[2])))
@@ -72,7 +71,6 @@ get_mic_df <- function(df, is_flat = TRUE, ...){
 #' @param df : Data frame object which is input of mic.
 #' @param group_key : characters, which is key of hierarchy
 #' @param min_value : Minimum number of records in each group.
-#' @param ... : parameters for minerva::mine.
 #' 
 #' @importFrom dplyr select_if
 #' @importFrom dplyr %>%
@@ -96,7 +94,7 @@ get_mic_df <- function(df, is_flat = TRUE, ...){
 #' @importFrom foreach %do%
 #' @importFrom magrittr set_colnames
 #' @export
-get_group_mic_df <- function(df, group_key, min_value, ...){
+get_group_mic_df <- function(df, group_key, min_value){
   
   extract_cols <- function(x) {
     return(is.numeric(x) | is.integer(x))
@@ -130,7 +128,7 @@ get_group_mic_df <- function(df, group_key, min_value, ...){
   mics <- df_tmp$data %>%
     map(
       ~ as.data.frame(.) %>%
-        mine(use = "complete.obs", ...)
+        mine(use = "complete.obs", y = NULL, master = NULL)
     )
   
   idx <- names(mics[[1]])
