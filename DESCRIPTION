@@ -1,0 +1,21 @@
+Package: micr
+Title: Library to get mic information with data.frame object
+Version: 0.0.0.9000
+Authors@R: c(
+              person("Yuta", "Masubuchi",
+              email = "yuuta.masubuti@gmail.com",
+              role = c("aut", "cre"))
+            )
+Description: .Library to get mic information with data.frame object
+Depends: R (>= 3.4.2)
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+Imports: dplyr,
+    tidyr,
+    tibble,
+    minerva,
+    purrr,
+    foreach,
+    magrittr
