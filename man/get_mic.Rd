@@ -4,16 +4,12 @@
 \alias{get_mic}
 \title{Utility function to call get_mic_df and get_group_mic_df}
 \usage{
-get_mic(df, group_key = NA, min_value = 1L, is_flat = TRUE)
+get_mic(df, group_key = NA)
 }
 \arguments{
 \item{df}{: Data frame object which is input of mic.}
 
 \item{group_key}{: If NA, this function compute mic of flat df, otherwise mic of each group.}
-
-\item{min_value}{: Minimum records of each group.}
-
-\item{is_flat}{: When computing non-grouped MIC, if TRUE, this function returns flat df.}
 }
 \description{
 Utility function to call get_mic_df and get_group_mic_df
