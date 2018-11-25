@@ -4,12 +4,10 @@
 \alias{get_mic_df}
 \title{Function to get information around MIC with data frame format}
 \usage{
-get_mic_df(df, is_flat = TRUE)
+get_mic_df(df)
 }
 \arguments{
 \item{df}{: Data frame object. This is input to compute mic.}
-
-\item{is_flat}{: Boolean, whether you want to get the return with plain data frame format.}
 }
 \description{
 Function to get information around MIC with data frame format
